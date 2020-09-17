@@ -6,7 +6,7 @@ set(INAV_INCLUDE_DIRS
 
 # TODO: We need a way to override HSE_VALUE
 set(INAV_DEFINITIONS
-    __FORKNAME__=inav
+    __FORKNAME__=Rocketflight
     __REVISION__="${GIT_SHORT_HASH}"
     HSE_VALUE=8000000
 )

@@ -9,7 +9,7 @@ endif()
 
 set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/${TOOLCHAIN}.cmake")
 
-project(INAV VERSION 2.5.0)
+project(ROCKETFLIGHT VERSION 2.5.0)
 
 ENABLE_LANGUAGE(ASM)
 
@@ -33,15 +33,15 @@ if (NO_GIT_HASH)
     message(FATAL_ERROR "Could not find git revision. Is git installed?")
 endif()
 
-set(INAV_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-set(INAV_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
-set(INAV_UTILS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/utils")
-set(INAV_MAIN_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/main")
+set(ROCKETFLIGHT_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(ROCKETFLIGHT_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+set(ROCKETFLIGHT_UTILS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/utils")
+set(ROCKETFLIGHT_MAIN_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/main")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(settings)
-include(inav)
+include(rocketflight)
 include(stm32)
 
 add_subdirectory(src)
